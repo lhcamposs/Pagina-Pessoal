@@ -1,0 +1,347 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Meu Portfolio</title>
+    <link rel="stylesheet" href="./src/style/style.css" />
+  </head>
+  <body>
+    <header>
+      <nav id="desktop-nav">
+        <div>
+          <ul class="nav-links">
+            <li><a href="#about">Sobre</a></li>
+            <li><a href="#experience">Experiencia</a></li>
+            <li><a href="#projects">Projetos</a></li>
+            <li><a href="#contact">Contato</a></li>
+          </ul>
+        </div>
+      </nav>
+      <div class="header">
+        <div class="checkbox-container">
+          <div class="checkbox-wrapper">
+            <input type="checkbox" id="toggle" />
+            <label class="checkbox" for="toggle">
+              <div class="trace"></div>
+              <div class="trace"></div>
+              <div class="trace"></div>
+            </label>
+            <div class="menu"></div>
+            <nav class="menu-items">
+              <ul>
+                <li>
+                  <a href="#">Inicio</a>
+                </li>
+                <li>
+                  <a href="#Sobre">Sobre</a>
+                </li>
+                <li>
+                  <a href="#Experiencia">Experiencia</a>
+                </li>
+                <li>
+                  <a href="#projetos">Projetos</a>
+                </li>
+                <li>
+                  <a href="#contato">Contato</a>
+                </li>
+              </ul>
+            </nav>
+          </div>
+        </div>
+      </div>
+    </header>
+    <section id="profile">
+      <div class="section__pic-container">
+        <img
+          src="./src/img/20210715_151625.jpg"
+          alt="Luan Henrique foto de perfil"
+        />
+      </div>
+      <div class="section__text">
+        <p class="section__text__p1">Olá, eu sou</p>
+        <h1 class="title">Luan Henrique</h1>
+        <p class="section__text__p2">Fullstack Developer</p>
+        <div class="btn-container">
+          <button
+            class="btn btn-color-2"
+            onclick="window.open('./assets/resume-example.pdf')"
+          >
+            Download curriculo
+          </button>
+          <button class="btn btn-color-1" onclick="location.href='./#contact'">
+            informação de contato
+          </button>
+        </div>
+        <div id="socials-container">
+          <img
+            src="./src/img/linkedin.png"
+            alt="My LinkedIn profile"
+            class="icon"
+            onclick="location.href='https://linkedin.com/in/lhcampos/'"
+          />
+          <img
+            src="./src/img/github.png"
+            alt="My Github profile"
+            class="icon"
+            onclick="location.href='https://github.com/lhcamposs'"
+          />
+        </div>
+      </div>
+    </section>
+
+    <section id="about">
+      <p class="section__text__p1">Saiba mais</p>
+      <h1 class="title">Sobre mim</h1>
+      <div class="section-container">
+        <div class="section__pic-container">
+          <img
+            src="./src/img/20240704_103118.jpg"
+            alt="Profile picture"
+            class="about-pic"
+          />
+        </div>
+        <div class="about-details-container">
+          <div class="about-containers">
+            <div class="details-container">
+              <img
+                src="./src/img/experience.png"
+                alt="Experience icon"
+                class="icon"
+              />
+              <h3>Experiencia</h3>
+              <p>1+ ano <br />Full stack Development</p>
+              <p>1+ ano <br />BackEnd Development</p>
+            </div>
+            <div class="details-container">
+              <img
+                src="./src/img/education.png"
+                alt="Education icon"
+                class="icon"
+              />
+              <h3>Educação</h3>
+              <p>
+                Bacharel em sistemas de informação<br />M.Sc. Masters Degree
+              </p>
+            </div>
+          </div>
+          <div class="text-container">
+            <p>
+              Lorem ipsum dolor sit amet consectetur adipisicing elit. Hic quis
+              reprehenderit et laborum, rem, dolore eum quod voluptate
+              exercitationem nobis, nihil esse debitis maxime facere minus sint
+              delectus velit in eos quo officiis explicabo deleniti dignissimos.
+              Eligendi illum libero dolorum cum laboriosam corrupti quidem,
+              reiciendis ea magnam? Nulla, impedit fuga!
+            </p>
+          </div>
+        </div>
+      </div>
+      <img
+        src="./src/img/arrow.png"
+        alt="Arrow icon"
+        class="icon arrow"
+        onclick="location.href='./#experience'"
+      />
+    </section>
+
+    <section id="experience">
+      <p class="section__text__p1">Explore Minha</p>
+      <h1 class="title">Experiencia</h1>
+      <div class="experience-details-container">
+        <div class="about-containers">
+          <div class="details-container">
+            <h2 class="experience-sub-title">Frontend Development</h2>
+            <div class="article-container">
+              <article>
+                <img
+                  src="./src/img/checkmark.png"
+                  alt="Experience icon"
+                  class="icon"
+                />
+                <div>
+                  <h3>HTML</h3>
+                  <p>Intermediario</p>
+                </div>
+              </article>
+              <article>
+                <img
+                  src="./src/img/checkmark.png"
+                  alt="Experience icon"
+                  class="icon"
+                />
+                <div>
+                  <h3>CSS</h3>
+                  <p>Basico</p>
+                </div>
+              </article>
+              <article>
+                <img
+                  src="./src/img/checkmark.png"
+                  alt="Experience icon"
+                  class="icon"
+                />
+                <div>
+                  <h3>JavaScript</h3>
+                  <p>Intermediario</p>
+                </div>
+              </article>
+              <article>
+                <img
+                  src="./src/img/checkmark.png"
+                  alt="Experience icon"
+                  class="icon"
+                />
+                <div>
+                  <h3>TypeScript</h3>
+                  <p>Intermediario</p>
+                </div>
+              </article>
+            </div>
+          </div>
+          <div class="details-container">
+            <h2 class="experience-sub-title">BackEnd Development</h2>
+            <div class="article-container">
+              <article>
+                <img
+                  src="./src/img/checkmark.png"
+                  alt="Experience icon"
+                  class="icon"
+                />
+                <div>
+                  <h3>Java</h3>
+                  <p>Intermediario</p>
+                </div>
+              </article>
+              <article>
+                <img
+                  src="./src/img/checkmark.png"
+                  alt="Experience icon"
+                  class="icon"
+                />
+                <div>
+                  <h3>Python</h3>
+                  <p>Basico</p>
+                </div>
+              </article>
+              <article>
+                <img
+                  src="./src/img/checkmark.png"
+                  alt="Experience icon"
+                  class="icon"
+                />
+                <div>
+                  <h3>MySQL</h3>
+                  <p>Intermediario</p>
+                </div>
+              </article>
+              <article>
+                <img
+                  src="./src/img/checkmark.png"
+                  alt="Experience icon"
+                  class="icon"
+                />
+                <div>
+                  <h3>PostgreSQL</h3>
+                  <p>Basico</p>
+                </div>
+              </article>
+              <article>
+                <img
+                  src="./src/img/checkmark.png"
+                  alt="Experience icon"
+                  class="icon"
+                />
+                <div>
+                  <h3>Node JS</h3>
+                  <p>Intermediario</p>
+                </div>
+              </article>
+              <article>
+                <img
+                  src="./src/img/checkmark.png"
+                  alt="Experience icon"
+                  class="icon"
+                />
+                <div>
+                  <h3>Git</h3>
+                  <p>Intermediario</p>
+                </div>
+              </article>
+            </div>
+          </div>
+        </div>
+      </div>
+      <img
+        src="./src/img/arrow.png"
+        alt="Arrow icon"
+        class="icon arrow"
+        onclick="location.href='./#projects'"
+      />
+    </section>
+
+    <section id="projetos">
+      <p class="section__text__p1">Navegue entre meus recentes</p>
+      <h1 class="title">Projetos</h1>
+      <article id="">
+        <h2>Projeto 1</h2>
+        <p>Descrição do projeto</p>
+        <ul>
+          <li>Tecnologia 1</li>
+          <li>Tecnologia 2</li>
+          <li>Tecnologia 3</li>
+        </ul>
+        <a href="#">Ver mais detalhes</a>
+      </article>
+      <article>
+        <h2>Projeto 2</h2>
+        <p>Descrição do projeto</p>
+        <ul>
+          <li>Tecnologia 1</li>
+          <li>Tecnologia 2</li>
+          <li>Tecnologia 3</li>
+        </ul>
+        <a href="#">Ver mais detalhes</a>
+      </article>
+      <article>
+        <h2>Projeto 3</h2>
+        <p>Descrição do projeto</p>
+        <ul>
+          <li>Tecnologia 1</li>
+          <li>Tecnologia 2</li>
+          <li>Tecnologia 3</li>
+        </ul>
+        <a href="#">Ver mais detalhes</a>
+      </article>
+    </section>
+
+    <section id="contact">
+      <p class="section__text__p1">Entre em contato</p>
+      <h1 class="title">Contact me</h1>
+      <div class="contact-info-upper-container">
+        <div class="contact-info-container">
+          <img
+            src="./src/img/email.png"
+            alt="Email icon"
+            class="icon contact-icon email-icon"
+          />
+          <p>
+            <a href="mailto:lhcampossoares@gmail.com"
+              >lhcampossoares@gmail.com</a
+            >
+          </p>
+        </div>
+        <div class="contact-info-container">
+          <img
+            src="./src/img/linkedin.png"
+            alt="LinkedIn icon"
+            class="icon contact-icon"
+          />
+          <p><a href="https://www.linkedin.com/in/lhcampos/">LinkedIn</a></p>
+        </div>
+      </div>
+    </section>
+
+    <script src="./src/javascript/index.js"></script>
+  </body>
+</html>

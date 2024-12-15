@@ -1,0 +1,578 @@
+@import url("https://fonts.googleapis.com/css2?family=Amatic+SC&display=swap");
+
+* {
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  margin: 0;
+  padding: 0;
+  background-color: #f4f4f4;
+  font-family: "amatic sc", sans-serif;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+p {
+  color: rgb(85, 85, 85);
+}
+
+/* TRANSITION */
+
+a,
+.btn {
+  transition: all 300ms ease;
+}
+
+/* DESKTOP NAV */
+
+@media (max-width: 1024px) {
+  #desktop-nav {
+    display: none;
+  }
+}
+
+nav,
+.nav-links {
+  display: flex;
+}
+
+nav {
+  justify-content: space-around;
+  align-items: center;
+  height: 17vh;
+}
+
+.nav-links {
+  gap: 2rem;
+  list-style: none;
+  font-size: 1.5rem;
+}
+
+a {
+  color: black;
+  text-decoration: none;
+  text-decoration-color: white;
+}
+
+a:hover {
+  color: grey;
+  text-decoration: underline;
+  text-underline-offset: 1rem;
+  text-decoration-color: rgb(181, 181, 181);
+}
+
+.logo {
+  font-size: 2rem;
+}
+
+.logo:hover {
+  cursor: default;
+}
+
+/* Header */
+
+h1 {
+  text-transform: uppercase;
+  letter-spacing: 4px;
+}
+
+h2 {
+  text-transform: uppercase;
+  letter-spacing: 4px;
+}
+
+/* MENU HAMBURGER */
+
+.checkbox-container {
+  display: none;
+}
+
+@media (min-width: 1024px) {
+  .checkbox-container {
+    display: none; /* Esconde o menu hamburguer em telas grandes */
+  }
+}
+
+.checkbox-container {
+  display: flex; /* Exibe o menu em telas pequenas */
+  justify-content: center;
+  align-items: center;
+}
+
+.checkbox {
+  height: 100px;
+  width: 100px;
+  position: absolute;
+  top: 0;
+  right: 0;
+  display: flex;
+  justify-content: center;
+  cursor: pointer;
+  z-index: 9999;
+  transition: 400ms ease-in-out 1;
+}
+
+.checkbox .trace {
+  width: 58px;
+  height: 2px;
+  background-color: #050505;
+  position: absolute;
+  border-radius: 4ms;
+  transition: 0.5s ease-in-out;
+}
+
+.checkbox .trace:nth-child(1) {
+  top: 26px;
+  transform: rotate(0);
+}
+
+.checkbox .trace:nth-child(2) {
+  top: 46px;
+  transform: rotate(0);
+}
+
+.checkbox .trace:nth-child(3) {
+  top: 66px;
+  transform: rotate(0);
+}
+
+#toggle {
+  display: none;
+}
+
+/* MENU */
+
+.menu {
+  position: absolute;
+  top: 28px;
+  right: 30px;
+  background: transparent;
+  height: 40px;
+  width: 40px;
+  border-radius: 50%;
+  box-shadow: 0px 0px 0px 0px #ffffff;
+  z-index: -1;
+  transition: 400ms ease-in-out 0s;
+}
+
+.menu-items {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  z-index: 2;
+  opacity: 0;
+  visibility: hidden;
+  transition: 400ms ease-in-out 0s;
+}
+
+.menu-items ul {
+  list-style-type: none;
+}
+
+.menu-items ul li a {
+  margin: 10px 0;
+  color: #2e1c28;
+  text-decoration: none;
+  text-transform: uppercase;
+  letter-spacing: 4px;
+  font-size: 40px;
+}
+
+/* ANIMAÇAO DO MENU */
+
+#toggle:checked + .checkbox .trace:nth-child(1) {
+  transform: rotate(45deg);
+  background-color: #2e1c2b;
+  top: 47px;
+}
+
+#toggle:checked + .checkbox .trace:nth-child(2) {
+  transform: translateX(-100px);
+  width: 30px;
+  visibility: hidden;
+  opacity: 0;
+}
+
+#toggle:checked + .checkbox .trace:nth-child(3) {
+  transform: rotate(-45deg);
+  background-color: #2e1c2b;
+  top: 48px;
+}
+
+#toggle:checked + .checkbox {
+  background-color: #ffffff;
+}
+
+#toggle:checked ~ .menu {
+  box-shadow: 0px 0px 0px 100vmax white;
+  z-index: 1;
+}
+
+#toggle:checked ~ .menu-items {
+  visibility: visible;
+  opacity: 1;
+}
+
+/* SECTIONS */
+
+section {
+  padding-top: 4vh;
+  height: 96vh;
+  margin: 0 10rem;
+  box-sizing: border-box;
+  min-height: fit-content;
+}
+
+.section-container {
+  display: flex;
+}
+
+/* PROFILE SECTION */
+
+#profile {
+  display: flex;
+  justify-content: center;
+  gap: 5rem;
+  height: 80vh;
+}
+
+.section__pic-container {
+  display: flex;
+  height: 400px;
+  width: 400px;
+  margin: auto 0;
+  clip-path: circle(50%);
+}
+
+.section__text {
+  align-self: center;
+  text-align: center;
+}
+
+.section__text p {
+  font-weight: 600;
+}
+
+.section__text__p1 {
+  text-align: center;
+}
+
+.section__text__p2 {
+  font-size: 1.75rem;
+  margin-bottom: 1rem;
+}
+
+.title {
+  font-size: 3rem;
+  text-align: center;
+}
+
+#socials-container {
+  display: flex;
+  justify-content: center;
+  margin-top: 1rem;
+  gap: 1rem;
+}
+
+/* ICONS */
+
+.icon {
+  cursor: pointer;
+  height: 2rem;
+}
+
+/* BUTTONS */
+
+.btn-container {
+  display: flex;
+  justify-content: center;
+  gap: 1rem;
+}
+
+.btn {
+  font-weight: 600;
+  transition: all 300ms ease;
+  padding: 1rem;
+  width: 8rem;
+  border-radius: 2rem;
+}
+
+.btn-color-1,
+.btn-color-2 {
+  border: rgb(53, 53, 53) 0.1rem solid;
+}
+
+.btn-color-1:hover,
+.btn-color-2:hover {
+  cursor: pointer;
+}
+
+.btn-color-1,
+.btn-color-2:hover {
+  background: rgb(53, 53, 53);
+  color: white;
+}
+
+.btn-color-1:hover {
+  background: rgb(0, 0, 0);
+}
+
+.btn-color-2 {
+  background: none;
+}
+
+.btn-color-2:hover {
+  border: rgb(255, 255, 255) 0.1rem solid;
+}
+
+.btn-container {
+  gap: 1rem;
+}
+
+/* ABOUT SECTION */
+
+#about {
+  position: relative;
+}
+
+.about-containers {
+  gap: 2rem;
+  margin-bottom: 2rem;
+  margin-top: 2rem;
+}
+
+.about-details-container {
+  justify-content: center;
+  flex-direction: column;
+}
+
+.about-containers,
+.about-details-container {
+  display: flex;
+}
+
+.about-pic {
+  border-radius: 2rem;
+}
+
+.arrow {
+  position: absolute;
+  right: -5rem;
+  bottom: 2.5rem;
+}
+
+.details-container {
+  padding: 1.5rem;
+  flex: 1;
+  background: white;
+  border-radius: 2rem;
+  border: rgb(53, 53, 53) 0.1rem solid;
+  border-color: rgb(163, 163, 163);
+  text-align: center;
+}
+
+.section-container {
+  gap: 4rem;
+  height: 80%;
+}
+
+.section__pic-container {
+  height: 400px;
+  width: 400px;
+  margin: auto 0;
+}
+
+/* projetos*/
+
+#projectos {
+  position: relative;
+}
+
+article {
+  background-color: #fff;
+  margin: 1rem 0;
+  padding: 1rem;
+  border-radius: 5px;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+}
+
+article h2 {
+  margin-top: 0;
+}
+
+article ul {
+  list-style: none;
+  padding: 0;
+}
+
+article ul li {
+  background-color: #eee;
+  margin: 0.5rem 0;
+  padding: 0.5rem;
+  border-radius: 3px;
+}
+
+article a {
+  display: inline-block;
+  margin-top: 1rem;
+  color: #333;
+  text-decoration: none;
+  background-color: #ddd;
+  padding: 0.5rem 1rem;
+  border-radius: 3px;
+}
+
+article a:hover {
+  background-color: #ccc;
+}
+
+/* CONTACT */
+
+#contact {
+  display: flex;
+  justify-content: center;
+  flex-direction: column;
+  height: 70vh;
+}
+
+.contact-info-upper-container {
+  display: flex;
+  justify-content: center;
+  border-radius: 2rem;
+  border: rgb(53, 53, 53) 0.1rem solid;
+  border-color: rgb(163, 163, 163);
+  background: (250, 250, 250);
+  margin: 2rem auto;
+  padding: 0.5rem;
+}
+
+.contact-info-container {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 0.5rem;
+  margin: 1rem;
+}
+
+.contact-info-container p {
+  font-size: larger;
+}
+
+.contact-icon {
+  cursor: default;
+}
+
+.email-icon {
+  height: 2.5rem;
+}
+
+/* Ajustes gerais para telas menores */
+@media (max-width: 768px) {
+  body {
+    padding: 0 1rem; /* Reduzindo o padding */
+  }
+
+  section {
+    margin: 0 2rem; /* Reduzindo a margem das seções */
+  }
+
+  .section-container {
+    flex-direction: column; /* Mudança de layout para coluna em telas pequenas */
+    gap: 2rem; /* Reduzir o gap entre elementos */
+  }
+
+  .section__pic-container {
+    height: 250px;
+    width: 250px; /* Reduzir o tamanho das imagens em dispositivos móveis */
+  }
+
+  .title {
+    font-size: 2rem; /* Diminuir tamanho da fonte para títulos */
+  }
+
+  .btn {
+    width: 100%; /* Botões ocupam a largura total em telas pequenas */
+    padding: 0.75rem;
+  }
+
+  .details-container {
+    padding: 1rem;
+  }
+
+  .nav-links {
+    font-size: 1.25rem; /* Reduzindo o tamanho da fonte no menu */
+  }
+
+  .menu-items ul li a {
+    font-size: 1.5rem; /* Reduzindo tamanho da fonte dos links no menu hamburguer */
+  }
+}
+
+
+/* Disposição das seções em telas menores */
+@media (max-width: 768px) {
+  #profile {
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+    gap: 2rem;
+  }
+
+  #projectos {
+    margin: 0 1rem;
+  }
+
+  article {
+    margin: 1rem 0;
+  }
+}
+
+/* Redimensionar imagens e ajustar textos */
+@media (max-width: 480px) {
+  .section__pic-container {
+    height: 200px;
+    width: 200px; /* Ajuste das imagens para telas pequenas */
+  }
+
+  .section__text__p2 {
+    font-size: 1.5rem;
+  }
+
+  .btn {
+    font-size: 1rem; /* Ajustar tamanho dos botões */
+  }
+
+  h1, h2 {
+    font-size: 1.5rem; /* Ajustar tamanho de títulos */
+  }
+
+  .menu-items ul li a {
+    font-size: 1.25rem; /* Ajustar tamanho da fonte no menu hamburguer */
+  }
+}
+
+/* Fontes flexíveis */
+html {
+  font-size: 100%;
+}
+
+@media (max-width: 768px) {
+  html {
+    font-size: 90%; /* Reduz o tamanho da fonte em telas menores */
+  }
+}
+
+@media (max-width: 480px) {
+  html {
+    font-size: 85%; /* Ajusta ainda mais para dispositivos muito pequenos */
+  }
+}
