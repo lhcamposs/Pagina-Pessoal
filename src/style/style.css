@@ -391,50 +391,6 @@ section {
   margin: auto 0;
 }
 
-/* projetos*/
-
-#projectos {
-  position: relative;
-}
-
-article {
-  background-color: #fff;
-  margin: 1rem 0;
-  padding: 1rem;
-  border-radius: 5px;
-  box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
-}
-
-article h2 {
-  margin-top: 0;
-}
-
-article ul {
-  list-style: none;
-  padding: 0;
-}
-
-article ul li {
-  background-color: #eee;
-  margin: 0.5rem 0;
-  padding: 0.5rem;
-  border-radius: 3px;
-}
-
-article a {
-  display: inline-block;
-  margin-top: 1rem;
-  color: #333;
-  text-decoration: none;
-  background-color: #ddd;
-  padding: 0.5rem 1rem;
-  border-radius: 3px;
-}
-
-article a:hover {
-  background-color: #ccc;
-}
-
 /* CONTACT */
 
 #contact {
@@ -517,7 +473,6 @@ article a:hover {
   }
 }
 
-
 /* Disposição das seções em telas menores */
 @media (max-width: 768px) {
   #profile {
@@ -551,7 +506,8 @@ article a:hover {
     font-size: 1rem; /* Ajustar tamanho dos botões */
   }
 
-  h1, h2 {
+  h1,
+  h2 {
     font-size: 1.5rem; /* Ajustar tamanho de títulos */
   }
 
